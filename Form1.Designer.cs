@@ -37,19 +37,20 @@ namespace winformtest
             this.btLoad = new System.Windows.Forms.Button();
             this.btNew = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.btGroundSelect = new System.Windows.Forms.Button();
             this.cbTile = new System.Windows.Forms.ComboBox();
             this.cbBackGround = new System.Windows.Forms.ComboBox();
             this.lbTile = new System.Windows.Forms.Label();
             this.lbWorld = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbName = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.btGroundSelect = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,6 +86,7 @@ namespace winformtest
             this.btSave.TabIndex = 2;
             this.btSave.Text = "저장하기";
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // btLoad
             // 
@@ -94,6 +96,7 @@ namespace winformtest
             this.btLoad.TabIndex = 1;
             this.btLoad.Text = "불러오기";
             this.btLoad.UseVisualStyleBackColor = true;
+            this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
             // 
             // btNew
             // 
@@ -103,6 +106,7 @@ namespace winformtest
             this.btNew.TabIndex = 0;
             this.btNew.Text = "새로 만들기";
             this.btNew.UseVisualStyleBackColor = true;
+            this.btNew.Click += new System.EventHandler(this.btNew_Click);
             // 
             // groupBox3
             // 
@@ -121,14 +125,33 @@ namespace winformtest
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "객체";
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(9, 266);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(185, 301);
+            this.listView1.TabIndex = 7;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // btGroundSelect
+            // 
+            this.btGroundSelect.Location = new System.Drawing.Point(14, 170);
+            this.btGroundSelect.Name = "btGroundSelect";
+            this.btGroundSelect.Size = new System.Drawing.Size(180, 38);
+            this.btGroundSelect.TabIndex = 6;
+            this.btGroundSelect.Text = "배경 지정";
+            this.btGroundSelect.UseVisualStyleBackColor = true;
+            this.btGroundSelect.Click += new System.EventHandler(this.btGroundSelect_Click);
+            // 
             // cbTile
             // 
             this.cbTile.FormattingEnabled = true;
             this.cbTile.Items.AddRange(new object[] {
             "Normal",
-            "Incline",
-            "Object"});
-            this.cbTile.Location = new System.Drawing.Point(57, 217);
+            "Incline"});
+            this.cbTile.Location = new System.Drawing.Point(57, 240);
             this.cbTile.Name = "cbTile";
             this.cbTile.Size = new System.Drawing.Size(137, 20);
             this.cbTile.TabIndex = 5;
@@ -141,15 +164,15 @@ namespace winformtest
             "Ulu City",
             "Blossom Castle",
             "Halloween"});
-            this.cbBackGround.Location = new System.Drawing.Point(57, 180);
+            this.cbBackGround.Location = new System.Drawing.Point(57, 214);
             this.cbBackGround.Name = "cbBackGround";
-            this.cbBackGround.Size = new System.Drawing.Size(77, 20);
+            this.cbBackGround.Size = new System.Drawing.Size(137, 20);
             this.cbBackGround.TabIndex = 4;
             // 
             // lbTile
             // 
             this.lbTile.AutoSize = true;
-            this.lbTile.Location = new System.Drawing.Point(12, 220);
+            this.lbTile.Location = new System.Drawing.Point(12, 243);
             this.lbTile.Name = "lbTile";
             this.lbTile.Size = new System.Drawing.Size(39, 12);
             this.lbTile.TabIndex = 3;
@@ -159,7 +182,7 @@ namespace winformtest
             // lbWorld
             // 
             this.lbWorld.AutoSize = true;
-            this.lbWorld.Location = new System.Drawing.Point(12, 183);
+            this.lbWorld.Location = new System.Drawing.Point(12, 217);
             this.lbWorld.Name = "lbWorld";
             this.lbWorld.Size = new System.Drawing.Size(39, 12);
             this.lbWorld.TabIndex = 2;
@@ -167,6 +190,7 @@ namespace winformtest
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Gray;
             this.pictureBox2.Location = new System.Drawing.Point(9, 37);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(185, 127);
@@ -182,17 +206,6 @@ namespace winformtest
             this.label2.Size = new System.Drawing.Size(69, 12);
             this.label2.TabIndex = 0;
             this.label2.Text = "<미리보기>";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(223, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(887, 754);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lbName
             // 
@@ -221,15 +234,6 @@ namespace winformtest
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(75, 23);
             // 
-            // btGroundSelect
-            // 
-            this.btGroundSelect.Location = new System.Drawing.Point(140, 180);
-            this.btGroundSelect.Name = "btGroundSelect";
-            this.btGroundSelect.Size = new System.Drawing.Size(54, 23);
-            this.btGroundSelect.TabIndex = 6;
-            this.btGroundSelect.Text = "선택";
-            this.btGroundSelect.UseVisualStyleBackColor = true;
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -239,15 +243,24 @@ namespace winformtest
             this.imageList1.Images.SetKeyName(2, "Halloween Tile1-3.png");
             this.imageList1.Images.SetKeyName(3, "Halloween Tile1-4.png");
             // 
-            // listView1
+            // openFileDialog1
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(9, 255);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(185, 312);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.Location = new System.Drawing.Point(223, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(885, 745);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseUp);
             // 
             // Form1
             // 
@@ -288,12 +301,13 @@ namespace winformtest
         private System.Windows.Forms.Label lbWorld;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.ComboBox cbTile;
-        public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btGroundSelect;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
