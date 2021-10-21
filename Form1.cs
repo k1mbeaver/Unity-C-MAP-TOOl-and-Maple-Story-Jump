@@ -107,14 +107,7 @@ namespace winformtest
 
         private void cbTile_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbBackGround.Text == "Halloween" && cbTile.Text == "Normal")
-            {
-                String[] aa = { "Halloween Tile1-1", "Halloween Tile1-2", "Halloween Tile1-3", "Halloween Tile1-4", "Halloween Tile1-5" };
-                for(int index = 0; index < aa.Length; index++)
-                {
-                    listView1.Items.Add(aa[index]);
-                }
-            }
+         
         }
 
         private void btLoad_Click(object sender, EventArgs e)
@@ -145,7 +138,10 @@ namespace winformtest
 
         private void btNew_Click(object sender, EventArgs e)
         {
-           
+            if(pictureBox1.Visible == false)
+            {
+                pictureBox1.Visible = true;
+            }
         }
 
         private void btGroundSelect_Click(object sender, EventArgs e)
@@ -153,16 +149,30 @@ namespace winformtest
             if(cbBackGround.Text == "Ulu City")
             {
                 image = new Bitmap(winformtest.Properties.Resources.Ulucity_Grid);
+                pictureBox1.Image = image;
             }
             else if(cbBackGround.Text == "Blossom Castle")
             {
                 image = new Bitmap(winformtest.Properties.Resources.Blossom_Grid);
+                pictureBox1.Image = image;
             }
             else if(cbBackGround.Text == "Halloween")
             {
                 image = new Bitmap(winformtest.Properties.Resources.Halloween_Grid);
+                pictureBox1.Image = image;
             }
-            pictureBox1.Image = image;
+        }
+
+        private void btTileSelect_Click(object sender, EventArgs e)
+        {
+            if (cbBackGround.Text == "Halloween" && cbTile.Text == "Normal")
+            {
+                String[] aa = { "Halloween Tile1-1", "Halloween Tile1-2", "Halloween Tile1-3", "Halloween Tile1-4", "Halloween Tile1-5" };
+                for (int index = 0; index < aa.Length; index++)
+                {
+                    TileListBox.Items.Add(aa[index]);
+                }
+            }
         }
     }
 }

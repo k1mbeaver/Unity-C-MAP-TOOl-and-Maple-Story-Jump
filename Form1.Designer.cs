@@ -37,7 +37,6 @@ namespace winformtest
             this.btLoad = new System.Windows.Forms.Button();
             this.btNew = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.btGroundSelect = new System.Windows.Forms.Button();
             this.cbTile = new System.Windows.Forms.ComboBox();
             this.cbBackGround = new System.Windows.Forms.ComboBox();
@@ -46,11 +45,11 @@ namespace winformtest
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TileListBox = new System.Windows.Forms.ListBox();
+            this.btTileSelect = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -110,7 +109,8 @@ namespace winformtest
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.listView1);
+            this.groupBox3.Controls.Add(this.btTileSelect);
+            this.groupBox3.Controls.Add(this.TileListBox);
             this.groupBox3.Controls.Add(this.btGroundSelect);
             this.groupBox3.Controls.Add(this.cbTile);
             this.groupBox3.Controls.Add(this.cbBackGround);
@@ -124,16 +124,6 @@ namespace winformtest
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "객체";
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(9, 266);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(185, 301);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // btGroundSelect
             // 
@@ -217,23 +207,6 @@ namespace winformtest
             this.lbName.TabIndex = 4;
             this.lbName.Text = "Jump Map Tool";
             // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(1120, 766);
-            this.shapeContainer1.TabIndex = 5;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // rectangleShape1
-            // 
-            this.rectangleShape1.Location = new System.Drawing.Point(502, 333);
-            this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(75, 23);
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -256,11 +229,32 @@ namespace winformtest
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseUp);
+            // 
+            // TileListBox
+            // 
+            this.TileListBox.FormattingEnabled = true;
+            this.TileListBox.ItemHeight = 12;
+            this.TileListBox.Location = new System.Drawing.Point(9, 306);
+            this.TileListBox.Name = "TileListBox";
+            this.TileListBox.Size = new System.Drawing.Size(185, 256);
+            this.TileListBox.TabIndex = 7;
+            // 
+            // btTileSelect
+            // 
+            this.btTileSelect.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btTileSelect.Location = new System.Drawing.Point(14, 266);
+            this.btTileSelect.Name = "btTileSelect";
+            this.btTileSelect.Size = new System.Drawing.Size(180, 34);
+            this.btTileSelect.TabIndex = 8;
+            this.btTileSelect.Text = "타일 검색";
+            this.btTileSelect.UseVisualStyleBackColor = true;
+            this.btTileSelect.Click += new System.EventHandler(this.btTileSelect_Click);
             // 
             // Form1
             // 
@@ -272,7 +266,6 @@ namespace winformtest
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.shapeContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -302,12 +295,11 @@ namespace winformtest
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.ComboBox cbTile;
         private System.Windows.Forms.Button btGroundSelect;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         public System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btTileSelect;
+        private System.Windows.Forms.ListBox TileListBox;
     }
 }
 
