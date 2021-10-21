@@ -83,9 +83,9 @@ namespace winformtest.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Blossom_Normal_TIle1_1 {
+        internal static System.Drawing.Bitmap Blossom_TIle1_1 {
             get {
-                object obj = ResourceManager.GetObject("Blossom_Normal_TIle1_1", resourceCulture);
+                object obj = ResourceManager.GetObject("Blossom_TIle1_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace winformtest.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Blossom_Normal_TIle1_2 {
+        internal static System.Drawing.Bitmap Blossom_TIle1_2 {
             get {
-                object obj = ResourceManager.GetObject("Blossom_Normal_TIle1_2", resourceCulture);
+                object obj = ResourceManager.GetObject("Blossom_TIle1_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace winformtest.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Blossom_Normal_TIle1_3 {
+        internal static System.Drawing.Bitmap Blossom_TIle1_3 {
             get {
-                object obj = ResourceManager.GetObject("Blossom_Normal_TIle1_3", resourceCulture);
+                object obj = ResourceManager.GetObject("Blossom_TIle1_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace winformtest.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Blossom_Normal_TIle1_4 {
+        internal static System.Drawing.Bitmap Blossom_TIle1_4 {
             get {
-                object obj = ResourceManager.GetObject("Blossom_Normal_TIle1_4", resourceCulture);
+                object obj = ResourceManager.GetObject("Blossom_TIle1_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace winformtest.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Blossom_Normal_TIle1_5 {
+        internal static System.Drawing.Bitmap Blossom_TIle1_5 {
             get {
-                object obj = ResourceManager.GetObject("Blossom_Normal_TIle1_5", resourceCulture);
+                object obj = ResourceManager.GetObject("Blossom_TIle1_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace winformtest.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Blossom_Normal_TIle1_6 {
+        internal static System.Drawing.Bitmap Blossom_TIle1_6 {
             get {
-                object obj = ResourceManager.GetObject("Blossom_Normal_TIle1_6", resourceCulture);
+                object obj = ResourceManager.GetObject("Blossom_TIle1_6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -15,8 +15,16 @@ namespace winformtest
         private Bitmap image;
         private Point pntCurrentPicbox;
         private Point pntMouseClick;
-
+        String[] UlucityTiles = { "UluCity_Tile1-1", "UluCity_Tile1-2", "UluCity_Tile1-3", "UluCity_Tile1-4", "UluCity_Tile1-5", "UluCity_Tile1-6" };
+        String[] BlossomTiles = { "Blossom_Tile1-1", "Blossom_Tile1-2", "Blossom_Tile1-3", "Blossom_Tile1-4", "Blossom_Tile1-5", "Blossom_Tile1-6" };
+        String[] HalloweenTiles = { "Halloween_Tile1-1", "Halloween_Tile1-2", "Halloween_Tile1-3", "Halloween_Tile1-4", "Halloween_Tile1-5", "Halloween_Tile1-6" };
         private bool blsClick = false;
+
+        public struct Tile
+        {
+            String tileName;
+            Bitmap tileBitmap;
+        }
 
         int nPictureBoxX;
         int nPictureBoxY;
@@ -165,12 +173,106 @@ namespace winformtest
 
         private void btTileSelect_Click(object sender, EventArgs e)
         {
-            if (cbBackGround.Text == "Halloween" && cbTile.Text == "Normal")
+            if (cbBackGround.Text == "Ulu City" && cbTile.Text == "Normal")
             {
-                String[] aa = { "Halloween Tile1-1", "Halloween Tile1-2", "Halloween Tile1-3", "Halloween Tile1-4", "Halloween Tile1-5" };
-                for (int index = 0; index < aa.Length; index++)
+                TileListBox.Items.Clear();
+                for (int index = 0; index < UlucityTiles.Length; index++)
                 {
-                    TileListBox.Items.Add(aa[index]);
+                    TileListBox.Items.Add(UlucityTiles[index]);
+                }
+            }
+            else if (cbBackGround.Text == "Blossom Castle" && cbTile.Text == "Normal")
+            {
+                TileListBox.Items.Clear();
+                for (int index = 0; index < BlossomTiles.Length; index++)
+                {
+                    TileListBox.Items.Add(BlossomTiles[index]);
+                }
+            }
+
+            else if (cbBackGround.Text == "Halloween" && cbTile.Text == "Normal")
+            {
+                TileListBox.Items.Clear();
+                for (int index = 0; index < HalloweenTiles.Length; index++)
+                {
+                    TileListBox.Items.Add(HalloweenTiles[index]);
+                }
+            }
+        }
+
+        private void TileListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbBackGround.Text == "Ulu City" && cbTile.Text == "Normal")
+            {
+                switch (TileListBox.Text)
+                {
+                    case "UluCity_Tile1-1":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_1);
+                        return;
+                    case "UluCity_Tile1-2":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_2);
+                        return;
+                    case "UluCity_Tile1-3":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_3);
+                        return;
+                    case "UluCity_Tile1-4":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_4);
+                        return;
+                    case "UluCity_Tile1-5":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_5);
+                        return;
+                    case "UluCity_Tile1-6":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_6);
+                        return;
+                }
+            }
+            else if (cbBackGround.Text == "Blossom Castle" && cbTile.Text == "Normal")
+            {
+                switch (TileListBox.Text)
+                {
+                    case "Blossom_Tile1-1":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_1);
+                        return;
+                    case "Blossom_Tile1-2":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_2);
+                        return;
+                    case "Blossom_Tile1-3":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_3);
+                        return;
+                    case "Blossom_Tile1-4":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_4);
+                        return;
+                    case "Blossom_Tile1-5":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_5);
+                        return;
+                    case "Blossom_Tile1-6":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_6);
+                        return;
+                }
+            }
+
+            else if (cbBackGround.Text == "Halloween" && cbTile.Text == "Normal")
+            {
+                switch (TileListBox.Text)
+                {
+                    case "Halloween_Tile1-1":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_1);
+                        return;
+                    case "Halloween_Tile1-2":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_2);
+                        return;
+                    case "Halloween_Tile1-3":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_3);
+                        return;
+                    case "Halloween_Tile1-4":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_4);
+                        return;
+                    case "Halloween_Tile1-5":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_5);
+                        return;
+                    case "Halloween_Tile1-6":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_6);
+                        return;
                 }
             }
         }
