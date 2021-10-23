@@ -36,6 +36,9 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -75,6 +78,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,73 +93,73 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\벚꽃성 1000x2000.jpg" />
+    <None Include="Resources\벚꽃성 1000x2000.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Blossom_Grid.jpg" />
+    <None Include="Resources\Blossom_Grid.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Halloween_Grid.jpg" />
+    <None Include="Resources\Halloween_Grid.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Ulucity_Grid.jpg" />
+    <None Include="Resources\Ulucity_Grid.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Black_1000x2000.jpg" />
+    <None Include="Resources\Black_1000x2000.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\UluCity_Tile1-1.jpg" />
+    <None Include="Resources\UluCity_Tile1-1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\UluCity_Tile1-2.jpg" />
+    <None Include="Resources\UluCity_Tile1-2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\UluCity_Tile1-3.jpg" />
+    <None Include="Resources\UluCity_Tile1-3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\UluCity_Tile1-4.jpg" />
+    <None Include="Resources\UluCity_Tile1-4.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\UluCity_Tile1-5.jpg" />
+    <None Include="Resources\UluCity_Tile1-5.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\UluCity_Tile1-6.jpg" />
+    <None Include="Resources\UluCity_Tile1-6.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Blossom_Normal_TIle1-1.jpg" />
+    <None Include="Resources\Blossom_Normal_TIle1-1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Blossom_Normal_TIle1-2.jpg" />
+    <None Include="Resources\Blossom_Normal_TIle1-2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Blossom_Normal_TIle1-3.jpg" />
+    <None Include="Resources\Blossom_Normal_TIle1-3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Blossom_Normal_TIle1-4.jpg" />
+    <None Include="Resources\Blossom_Normal_TIle1-4.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Blossom_Normal_TIle1-5.jpg" />
+    <None Include="Resources\Blossom_Normal_TIle1-5.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Blossom_Normal_TIle1-6.jpg" />
+    <None Include="Resources\Blossom_Normal_TIle1-6.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Halloween Tile1-1.jpg" />
+    <None Include="Resources\Halloween Tile1-1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Halloween Tile1-2.jpg" />
+    <None Include="Resources\Halloween Tile1-2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Halloween Tile1-3.jpg" />
+    <None Include="Resources\Halloween Tile1-3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Halloween Tile1-4.jpg" />
+    <None Include="Resources\Halloween Tile1-4.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Halloween Tile1-5.jpg" />
+    <None Include="Resources\Halloween Tile1-5.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Halloween Tile1-6.jpg" />
+    <None Include="Resources\Halloween Tile1-6.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Blossom_Normal_TIle1-61.jpg" />
@@ -225,6 +229,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Halloween Tile1-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black_1000x20001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Grid1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Grid1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ulucity_1000x1500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\벚꽃성 1000x1500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_1000x1500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black_1000x1500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom 1000x1500.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -117,7 +117,7 @@ namespace winformtest
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(15, 187);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 576);
+            this.groupBox3.Size = new System.Drawing.Size(200, 588);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "객체";
@@ -125,9 +125,9 @@ namespace winformtest
             // btTileSelect
             // 
             this.btTileSelect.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btTileSelect.Location = new System.Drawing.Point(14, 266);
+            this.btTileSelect.Location = new System.Drawing.Point(6, 274);
             this.btTileSelect.Name = "btTileSelect";
-            this.btTileSelect.Size = new System.Drawing.Size(180, 34);
+            this.btTileSelect.Size = new System.Drawing.Size(185, 34);
             this.btTileSelect.TabIndex = 8;
             this.btTileSelect.Text = "타일 검색";
             this.btTileSelect.UseVisualStyleBackColor = true;
@@ -137,17 +137,17 @@ namespace winformtest
             // 
             this.TileListBox.FormattingEnabled = true;
             this.TileListBox.ItemHeight = 12;
-            this.TileListBox.Location = new System.Drawing.Point(9, 306);
+            this.TileListBox.Location = new System.Drawing.Point(6, 314);
             this.TileListBox.Name = "TileListBox";
-            this.TileListBox.Size = new System.Drawing.Size(185, 256);
+            this.TileListBox.Size = new System.Drawing.Size(185, 268);
             this.TileListBox.TabIndex = 7;
             this.TileListBox.SelectedIndexChanged += new System.EventHandler(this.TileListBox_SelectedIndexChanged);
             // 
             // btGroundSelect
             // 
-            this.btGroundSelect.Location = new System.Drawing.Point(14, 170);
+            this.btGroundSelect.Location = new System.Drawing.Point(6, 170);
             this.btGroundSelect.Name = "btGroundSelect";
-            this.btGroundSelect.Size = new System.Drawing.Size(180, 38);
+            this.btGroundSelect.Size = new System.Drawing.Size(185, 38);
             this.btGroundSelect.TabIndex = 6;
             this.btGroundSelect.Text = "배경 지정";
             this.btGroundSelect.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@ namespace winformtest
             // PreviewBox
             // 
             this.PreviewBox.BackColor = System.Drawing.Color.Gray;
-            this.PreviewBox.Location = new System.Drawing.Point(9, 37);
+            this.PreviewBox.Location = new System.Drawing.Point(6, 37);
             this.PreviewBox.Name = "PreviewBox";
             this.PreviewBox.Size = new System.Drawing.Size(185, 127);
             this.PreviewBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -232,9 +232,10 @@ namespace winformtest
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(223, 9);
+            this.pictureBox1.Image = global::winformtest.Properties.Resources.Black_1000x1500;
+            this.pictureBox1.Location = new System.Drawing.Point(260, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(885, 745);
+            this.pictureBox1.Size = new System.Drawing.Size(500, 750);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -249,7 +250,7 @@ namespace winformtest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 766);
+            this.ClientSize = new System.Drawing.Size(784, 811);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);

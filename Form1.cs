@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace winformtest
 {
@@ -20,14 +22,29 @@ namespace winformtest
         String[] HalloweenTiles = { "Halloween_Tile1-1", "Halloween_Tile1-2", "Halloween_Tile1-3", "Halloween_Tile1-4", "Halloween_Tile1-5", "Halloween_Tile1-6" };
         private bool blsClick = false;
 
-        public struct Tile
-        {
-            String tileName;
-            Bitmap tileBitmap;
-        }
-
         int nPictureBoxX;
         int nPictureBoxY;
+
+        public struct TIle
+        {
+            public Rectangle rec;
+            public int nX;
+            public int nY;
+            public String strBackground;
+            public String strTile;
+            public String strTileNumber;
+        }
+
+        public struct Vector2
+        {
+            int nX;
+            int nY;
+        }
+
+        Vector2 TileXY;
+
+        TIle[,] myNewTileList = new TIle[20, 40];
+
 
         public Form1()
         {
@@ -41,7 +58,7 @@ namespace winformtest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            image = new Bitmap(winformtest.Properties.Resources.Black_1000x2000);
+            image = new Bitmap(winformtest.Properties.Resources.Black_1000x1500);
 
             nPictureBoxX = pictureBox1.Size.Width;
             nPictureBoxY = pictureBox1.Size.Height;
@@ -59,21 +76,38 @@ namespace winformtest
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
+            /*
             e.Graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
             e.Graphics.Clear(Color.White);
             e.Graphics.DrawImage(image, pntCurrentPicbox);
             pictureBox1.Focus();
+            */
         }
         private void PictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            blsClick = true;
+            /*
+            if(e.Button == System.Windows.Forms.MouseButtons.Middle)
+            {
+                blsClick = true;
 
-            pntMouseClick.X = e.X;
-            pntMouseClick.Y = e.Y;
+                pntMouseClick.X = e.X;
+                pntMouseClick.Y = e.Y;
+            }
+            */
+
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pntMouseClick.X = e.X;
+                pntMouseClick.Y = e.Y;
+
+                Graphics grp = pictureBox1.CreateGraphics();
+                grp.DrawImage(PreviewBox.Image, pntMouseClick);
+            }
         }
 
         private void PictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
+            /*
             if (blsClick)
             {
                 pntCurrentPicbox.X = pntCurrentPicbox.X + e.X - pntMouseClick.X;
@@ -101,16 +135,12 @@ namespace winformtest
 
                 pictureBox1.Invalidate();
             }
+            */
         }
 
         private void PictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            blsClick = false;
-        }
-
-    private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
+            //blsClick = false;
         }
 
         private void cbTile_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,9 +176,27 @@ namespace winformtest
 
         private void btNew_Click(object sender, EventArgs e)
         {
+
             if(pictureBox1.Visible == false)
             {
                 pictureBox1.Visible = true;
+            }
+            Graphics g = this.pictureBox1.CreateGraphics();
+            Pen p = new Pen(Color.White, 1);
+
+            for(int TileHeight = 0; TileHeight < 40; TileHeight++)
+            {
+                for(int TileWidth = 0; TileWidth < 20; TileWidth++)
+                {
+                    myNewTileList[TileWidth, TileHeight].rec = new Rectangle(TileWidth * 25, TileHeight * 25, 25, 25);
+                    myNewTileList[TileWidth, TileHeight].nX = TileWidth;
+                    myNewTileList[TileWidth, TileHeight].nY = TileHeight;
+                    myNewTileList[TileWidth, TileHeight].strBackground = "";
+                    myNewTileList[TileWidth, TileHeight].strTile = "";
+                    myNewTileList[TileWidth, TileHeight].strTileNumber = "";
+
+                    g.DrawRectangle(p, myNewTileList[TileWidth, TileHeight].rec);
+                }
             }
         }
 
@@ -156,17 +204,17 @@ namespace winformtest
         {
             if(cbBackGround.Text == "Ulu City")
             {
-                image = new Bitmap(winformtest.Properties.Resources.Ulucity_Grid);
+                image = new Bitmap(winformtest.Properties.Resources.Ulucity_1000x1500);
                 pictureBox1.Image = image;
             }
             else if(cbBackGround.Text == "Blossom Castle")
             {
-                image = new Bitmap(winformtest.Properties.Resources.Blossom_Grid);
+                image = new Bitmap(winformtest.Properties.Resources.Blossom_1000x1500);
                 pictureBox1.Image = image;
             }
             else if(cbBackGround.Text == "Halloween")
             {
-                image = new Bitmap(winformtest.Properties.Resources.Halloween_Grid);
+                image = new Bitmap(winformtest.Properties.Resources.Halloween_1000x1500);
                 pictureBox1.Image = image;
             }
         }

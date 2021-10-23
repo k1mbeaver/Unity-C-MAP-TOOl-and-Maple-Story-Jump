@@ -63,9 +63,9 @@ namespace winformtest.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Black_1000x2000 {
+        internal static System.Drawing.Bitmap Black_1000x1500 {
             get {
-                object obj = ResourceManager.GetObject("Black_1000x2000", resourceCulture);
+                object obj = ResourceManager.GetObject("Black_1000x1500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace winformtest.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Blossom_Grid {
+        internal static System.Drawing.Bitmap Blossom_1000x1500 {
             get {
-                object obj = ResourceManager.GetObject("Blossom_Grid", resourceCulture);
+                object obj = ResourceManager.GetObject("Blossom_1000x1500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace winformtest.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Halloween_Grid {
+        internal static System.Drawing.Bitmap Halloween_1000x1500 {
             get {
-                object obj = ResourceManager.GetObject("Halloween_Grid", resourceCulture);
+                object obj = ResourceManager.GetObject("Halloween_1000x1500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace winformtest.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Ulucity_Grid {
+        internal static System.Drawing.Bitmap Ulucity_1000x1500 {
             get {
-                object obj = ResourceManager.GetObject("Ulucity_Grid", resourceCulture);
+                object obj = ResourceManager.GetObject("Ulucity_1000x1500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,16 +276,6 @@ namespace winformtest.Properties {
         internal static System.Drawing.Bitmap UluCity_Tile1_6 {
             get {
                 object obj = ResourceManager.GetObject("UluCity_Tile1_6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap 벚꽃성_1000x2000 {
-            get {
-                object obj = ResourceManager.GetObject("벚꽃성_1000x2000", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

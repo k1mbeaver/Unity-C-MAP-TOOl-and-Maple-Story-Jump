@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Black_1000x2000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Black_1000x2000.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Black_1000x1500" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Black_1000x1500.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Blossom_Grid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Blossom_Grid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Blossom_1000x1500" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom 1000x1500.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Blossom_TIle1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blossom_TIle1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,8 +142,8 @@
   <data name="Blossom_TIle1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blossom_TIle1-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Halloween_Grid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Halloween_Grid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Halloween_1000x1500" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_1000x1500.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Halloween_Tile1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Halloween Tile1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +163,8 @@
   <data name="Halloween_Tile1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Halloween Tile1-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ulucity_Grid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ulucity_Grid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ulucity_1000x1500" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ulucity_1000x1500.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UluCity_Tile1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UluCity_Tile1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,8 +183,5 @@
   </data>
   <data name="UluCity_Tile1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UluCity_Tile1-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="벚꽃성_1000x2000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\벚꽃성 1000x2000.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
