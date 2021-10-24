@@ -17,9 +17,9 @@ namespace winformtest
         private Bitmap image;
         private Point pntCurrentPicbox;
         private Point pntMouseClick;
-        String[] UlucityTiles = { "UluCity_Tile1-1", "UluCity_Tile1-2", "UluCity_Tile1-3", "UluCity_Tile1-4", "UluCity_Tile1-5", "UluCity_Tile1-6" };
-        String[] BlossomTiles = { "Blossom_Tile1-1", "Blossom_Tile1-2", "Blossom_Tile1-3", "Blossom_Tile1-4", "Blossom_Tile1-5", "Blossom_Tile1-6" };
-        String[] HalloweenTiles = { "Halloween_Tile1-1", "Halloween_Tile1-2", "Halloween_Tile1-3", "Halloween_Tile1-4", "Halloween_Tile1-5", "Halloween_Tile1-6" };
+        String[] myTiles = { "UluCity_Tile1-1", "UluCity_Tile1-2", "UluCity_Tile1-3", "UluCity_Tile1-4", "UluCity_Tile1-5", "UluCity_Tile1-6", 
+            "Blossom_Tile1-1", "Blossom_Tile1-2", "Blossom_Tile1-3", "Blossom_Tile1-4", "Blossom_Tile1-5", "Blossom_Tile1-6", 
+            "Halloween_Tile1-1", "Halloween_Tile1-2", "Halloween_Tile1-3", "Halloween_Tile1-4", "Halloween_Tile1-5", "Halloween_Tile1-6" };
         private bool blsClick = false;
 
         int nPictureBoxX;
@@ -27,7 +27,8 @@ namespace winformtest
 
         public struct TIle
         {
-            public Rectangle rec;
+            public PictureBox Tilebox;
+            //public Rectangle rec;
             public int nX;
             public int nY;
             public String strBackground;
@@ -43,7 +44,7 @@ namespace winformtest
 
         Vector2 TileXY;
 
-        TIle[,] myNewTileList = new TIle[20, 40];
+        TIle[,] myNewTileList = new TIle[20, 30];
 
 
         public Form1()
@@ -100,8 +101,8 @@ namespace winformtest
                 pntMouseClick.X = e.X;
                 pntMouseClick.Y = e.Y;
 
-                Graphics grp = pictureBox1.CreateGraphics();
-                grp.DrawImage(PreviewBox.Image, pntMouseClick);
+                //Graphics grp = pictureBox1.CreateGraphics();
+                //grp.DrawImage(PreviewBox.Image, pntMouseClick);
             }
         }
 
@@ -176,33 +177,43 @@ namespace winformtest
 
         private void btNew_Click(object sender, EventArgs e)
         {
+            //Graphics g = this.pictureBox1.CreateGraphics();
+            //Pen p = new Pen(Color.White, 1);
+            pictureBox1.Controls.Clear();
 
-            if(pictureBox1.Visible == false)
-            {
-                pictureBox1.Visible = true;
-            }
-            Graphics g = this.pictureBox1.CreateGraphics();
-            Pen p = new Pen(Color.White, 1);
-
-            for(int TileHeight = 0; TileHeight < 40; TileHeight++)
+            for (int TileHeight = 0; TileHeight < 30; TileHeight++)
             {
                 for(int TileWidth = 0; TileWidth < 20; TileWidth++)
                 {
-                    myNewTileList[TileWidth, TileHeight].rec = new Rectangle(TileWidth * 25, TileHeight * 25, 25, 25);
+                    myNewTileList[TileWidth, TileHeight].Tilebox = new PictureBox();
+                    myNewTileList[TileWidth, TileHeight].Tilebox.Left = TileWidth * 25;
+                    myNewTileList[TileWidth, TileHeight].Tilebox.Top = TileHeight * 25;
+                    myNewTileList[TileWidth, TileHeight].Tilebox.Image = null;
+                    myNewTileList[TileWidth, TileHeight].Tilebox.BackColor = Color.Transparent;
+                    myNewTileList[TileWidth, TileHeight].Tilebox.Width = 25;
+                    myNewTileList[TileWidth, TileHeight].Tilebox.Height = 25;
+                    myNewTileList[TileWidth, TileHeight].Tilebox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    //myNewTileList[TileWidth, TileHeight].rec = new Rectangle(TileWidth * 25, TileHeight * 25, 25, 25);
                     myNewTileList[TileWidth, TileHeight].nX = TileWidth;
                     myNewTileList[TileWidth, TileHeight].nY = TileHeight;
                     myNewTileList[TileWidth, TileHeight].strBackground = "";
                     myNewTileList[TileWidth, TileHeight].strTile = "";
                     myNewTileList[TileWidth, TileHeight].strTileNumber = "";
 
-                    g.DrawRectangle(p, myNewTileList[TileWidth, TileHeight].rec);
+                    //g.DrawRectangle(p, myNewTileList[TileWidth, TileHeight].rec);
+                    //Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                 }
             }
         }
 
         private void btGroundSelect_Click(object sender, EventArgs e)
         {
-            if(cbBackGround.Text == "Ulu City")
+            if (pictureBox1.Visible == false)
+            {
+                pictureBox1.Visible = true;
+            }
+
+            if (cbBackGround.Text == "Ulu City")
             {
                 image = new Bitmap(winformtest.Properties.Resources.Ulucity_1000x1500);
                 pictureBox1.Image = image;
@@ -221,36 +232,19 @@ namespace winformtest
 
         private void btTileSelect_Click(object sender, EventArgs e)
         {
-            if (cbBackGround.Text == "Ulu City" && cbTile.Text == "Normal")
+            if (cbTile.Text == "Normal")
             {
                 TileListBox.Items.Clear();
-                for (int index = 0; index < UlucityTiles.Length; index++)
+                for (int index = 0; index < myTiles.Length; index++)
                 {
-                    TileListBox.Items.Add(UlucityTiles[index]);
-                }
-            }
-            else if (cbBackGround.Text == "Blossom Castle" && cbTile.Text == "Normal")
-            {
-                TileListBox.Items.Clear();
-                for (int index = 0; index < BlossomTiles.Length; index++)
-                {
-                    TileListBox.Items.Add(BlossomTiles[index]);
-                }
-            }
-
-            else if (cbBackGround.Text == "Halloween" && cbTile.Text == "Normal")
-            {
-                TileListBox.Items.Clear();
-                for (int index = 0; index < HalloweenTiles.Length; index++)
-                {
-                    TileListBox.Items.Add(HalloweenTiles[index]);
+                    TileListBox.Items.Add(myTiles[index]);
                 }
             }
         }
 
         private void TileListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbBackGround.Text == "Ulu City" && cbTile.Text == "Normal")
+            if (cbTile.Text == "Normal")
             {
                 switch (TileListBox.Text)
                 {
@@ -272,12 +266,24 @@ namespace winformtest
                     case "UluCity_Tile1-6":
                         PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_6);
                         return;
-                }
-            }
-            else if (cbBackGround.Text == "Blossom Castle" && cbTile.Text == "Normal")
-            {
-                switch (TileListBox.Text)
-                {
+                    case "Halloween_Tile1-1":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_1);
+                        return;
+                    case "Halloween_Tile1-2":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_2);
+                        return;
+                    case "Halloween_Tile1-3":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_3);
+                        return;
+                    case "Halloween_Tile1-4":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_4);
+                        return;
+                    case "Halloween_Tile1-5":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_5);
+                        return;
+                    case "Halloween_Tile1-6":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_6);
+                        return;
                     case "Blossom_Tile1-1":
                         PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_1);
                         return;
@@ -298,31 +304,82 @@ namespace winformtest
                         return;
                 }
             }
+        }
 
-            else if (cbBackGround.Text == "Halloween" && cbTile.Text == "Normal")
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btPlace_Click(object sender, EventArgs e)
+        {
+            if (tbWidth.Text == "" || tbHeight.Text == "")
             {
-                switch (TileListBox.Text)
-                {
-                    case "Halloween_Tile1-1":
-                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_1);
-                        return;
-                    case "Halloween_Tile1-2":
-                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_2);
-                        return;
-                    case "Halloween_Tile1-3":
-                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_3);
-                        return;
-                    case "Halloween_Tile1-4":
-                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_4);
-                        return;
-                    case "Halloween_Tile1-5":
-                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_5);
-                        return;
-                    case "Halloween_Tile1-6":
-                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_6);
-                        return;
-                }
+                MessageBox.Show("값을 입력하여 주세요", "입력 오류", MessageBoxButtons.OK);
+                return;
             }
+
+            else if (Convert.ToInt32(tbWidth.Text) > 19 || Convert.ToInt32(tbWidth.Text) < 0)
+            {
+                MessageBox.Show("0 ~ 19사이의 숫자를 입력하여 주세요", "가로 칸", MessageBoxButtons.OK);
+                tbWidth.Text = "";
+                return;
+            }
+
+            else if (Convert.ToInt32(tbHeight.Text) > 29 || Convert.ToInt32(tbHeight.Text) < 0)
+            {
+                MessageBox.Show("0 ~ 29사이의 숫자를 입력하여 주세요", "세로 칸", MessageBoxButtons.OK);
+                tbHeight.Text = "";
+                return;
+            }
+
+            int nWidth, nHeight;
+
+            nWidth = Convert.ToInt32(tbWidth.Text);
+            nHeight = Convert.ToInt32(tbHeight.Text);
+
+            if (PreviewBox.Image == null)
+            {
+                MessageBox.Show("타일을 선택하여 주세요", "타일 선택 오류", MessageBoxButtons.OK);
+                return;
+            }
+            myNewTileList[nWidth, nHeight].Tilebox.Image = new Bitmap(PreviewBox.Image);
+            pictureBox1.Controls.Add(myNewTileList[nWidth, nHeight].Tilebox);
+        }
+
+        private void btTileDelete_Click(object sender, EventArgs e)
+        {
+            if (tbWidth.Text == "" || tbHeight.Text == "")
+            {
+                MessageBox.Show("값을 입력하여 주세요", "입력 오류", MessageBoxButtons.OK);
+                return;
+            }
+
+            else if (Convert.ToInt32(tbWidth.Text) > 19 || Convert.ToInt32(tbWidth.Text) < 0)
+            {
+                MessageBox.Show("0 ~ 19사이의 숫자를 입력하여 주세요", "가로 칸", MessageBoxButtons.OK);
+                tbWidth.Text = "";
+                return;
+            }
+
+            else if (Convert.ToInt32(tbHeight.Text) > 29 || Convert.ToInt32(tbHeight.Text) < 0)
+            {
+                MessageBox.Show("0 ~ 29사이의 숫자를 입력하여 주세요", "세로 칸", MessageBoxButtons.OK);
+                tbHeight.Text = "";
+                return;
+            }
+
+            int nWidth, nHeight;
+
+            nWidth = Convert.ToInt32(tbWidth.Text);
+            nHeight = Convert.ToInt32(tbHeight.Text);
+
+            myNewTileList[nWidth, nHeight].Tilebox.Image = null;
+        }
+
+        private void lbWorld_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
