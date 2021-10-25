@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,8 +32,6 @@ namespace winformtest
             //public Rectangle rec;
             public int nX;
             public int nY;
-            public String strBackground;
-            public String strTile;
             public String strTileNumber;
         }
 
@@ -151,17 +150,152 @@ namespace winformtest
 
         private void btLoad_Click(object sender, EventArgs e)
         {
+            if (pictureBox1.Visible == false)
+            {
+                MessageBox.Show("배경 이미지를 먼저 선택하여 주세요", "오류", MessageBoxButtons.OK);
+                return;
+            }
+
             String file_path = null;
             openFileDialog1.InitialDirectory = "C:\\"; // 시작 위치를 C:\\로 설정
             if(openFileDialog1.ShowDialog() == DialogResult.OK) // 파일을 정하고 열기를 누르면
             {
                 file_path = openFileDialog1.FileName; // 선택된 파일의 풀 경로를 불러와 저장
                 //이제 여기서 불러온거를 오른쪽 픽쳐박스에 띄우기? Json 파일
+                pictureBox1.Controls.Clear();
+                string strReturnValue = System.IO.File.ReadAllText(file_path);
+                JObject root = JObject.Parse(strReturnValue);
+
+                int i = 0;
+                JToken arr_data = root["Tiles"];
+                JArray Tile_array = (JArray)arr_data;
+
+                for (int TileHeight = 0; TileHeight < 30; TileHeight++)
+                {
+                    for (int TileWidth = 0; TileWidth < 20; TileWidth++)
+                    {
+                        // 기본값
+                        myNewTileList[TileWidth, TileHeight].Tilebox = new PictureBox();
+                        myNewTileList[TileWidth, TileHeight].Tilebox.Left = TileWidth * 25;
+                        myNewTileList[TileWidth, TileHeight].Tilebox.Top = TileHeight * 25;
+                        myNewTileList[TileWidth, TileHeight].Tilebox.BackColor = Color.Transparent;
+                        myNewTileList[TileWidth, TileHeight].Tilebox.Width = 25;
+                        myNewTileList[TileWidth, TileHeight].Tilebox.Height = 25;
+                        myNewTileList[TileWidth, TileHeight].Tilebox.SizeMode = PictureBoxSizeMode.StretchImage;
+                        // 놓아질 타일(switch문 써서 해당 타일 설치)
+                        myNewTileList[TileWidth, TileHeight].Tilebox.Image = null;
+                        if(Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-1")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_1);
+                        }
+                        else if(Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-2")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_2);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-3")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_3);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-4")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_4);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-5")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_5);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-6")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_6);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-1")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_1);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-2")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_2);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-3")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_3);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-4")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_4);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-5")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_5);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-6")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_6);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-1")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_1);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-2")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_2);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-3")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_3);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-4")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_4);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-5")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_5);
+                        }
+                        else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-6")
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_6);
+                        }
+                        else
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = null;
+                        }
+                        //myNewTileList[TileWidth, TileHeight].rec = new Rectangle(TileWidth * 25, TileHeight * 25, 25, 25);
+                        myNewTileList[TileWidth, TileHeight].nX = Convert.ToInt32(Tile_array[i]["X"].ToString());
+                        myNewTileList[TileWidth, TileHeight].nY = Convert.ToInt32(Tile_array[i]["Y"].ToString());
+
+
+                        //g.DrawRectangle(p, myNewTileList[TileWidth, TileHeight].rec);
+                        //Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
+                        i++; // json내부 "Tile"에 있는 []
+                        pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
+                    }
+                }
             }
         }
 
         private void btSave_Click(object sender, EventArgs e)
         {
+            // json 파일로 저장하기
+            var json = new JObject();
+            var jfriends = new JArray();
+            for (int TileHeight = 0; TileHeight < 30; TileHeight++)
+            {
+                for (int TileWidth = 0; TileWidth < 20; TileWidth++)
+                {
+                    var myTile = new JObject();
+                    myTile.Add("X", myNewTileList[TileWidth, TileHeight].nX);
+                    myTile.Add("Y", myNewTileList[TileWidth, TileHeight].nY);
+                    myTile.Add("TileNum", myNewTileList[TileWidth, TileHeight].strTileNumber);
+
+                    jfriends.Add(myTile);
+                }
+            }
+            json.Add("Tiles", jfriends);
+            String strRoot = json.ToString();
+            //json.Add("Tiles",)
+
+            // 저장하기
             String file_path = null;
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "저장";
@@ -171,7 +305,7 @@ namespace winformtest
             if(saveFileDialog.ShowDialog() == DialogResult.OK) // 저장 위치를 정하고 저장을 누르면
             {
                 file_path = saveFileDialog.FileName; // 저장 경로
-                pictureBox1.Image.Save(file_path);// 이제 픽쳐박스에서 만든거를 저장 예: pb.Image.Save(file_path) pb는 픽쳐박스
+                System.IO.File.WriteAllText(file_path, strRoot);             
             }
         }
 
@@ -179,6 +313,11 @@ namespace winformtest
         {
             //Graphics g = this.pictureBox1.CreateGraphics();
             //Pen p = new Pen(Color.White, 1);
+            if(pictureBox1.Visible == false)
+            {
+                MessageBox.Show("배경 이미지를 먼저 선택하여 주세요", "오류", MessageBoxButtons.OK);
+                return;
+            }
             pictureBox1.Controls.Clear();
 
             for (int TileHeight = 0; TileHeight < 30; TileHeight++)
@@ -196,8 +335,6 @@ namespace winformtest
                     //myNewTileList[TileWidth, TileHeight].rec = new Rectangle(TileWidth * 25, TileHeight * 25, 25, 25);
                     myNewTileList[TileWidth, TileHeight].nX = TileWidth;
                     myNewTileList[TileWidth, TileHeight].nY = TileHeight;
-                    myNewTileList[TileWidth, TileHeight].strBackground = "";
-                    myNewTileList[TileWidth, TileHeight].strTile = "";
                     myNewTileList[TileWidth, TileHeight].strTileNumber = "";
 
                     //g.DrawRectangle(p, myNewTileList[TileWidth, TileHeight].rec);
@@ -344,6 +481,7 @@ namespace winformtest
                 return;
             }
             myNewTileList[nWidth, nHeight].Tilebox.Image = new Bitmap(PreviewBox.Image);
+            myNewTileList[nWidth, nHeight].strTileNumber = TileListBox.Text;
             pictureBox1.Controls.Add(myNewTileList[nWidth, nHeight].Tilebox);
         }
 
@@ -374,7 +512,8 @@ namespace winformtest
             nWidth = Convert.ToInt32(tbWidth.Text);
             nHeight = Convert.ToInt32(tbHeight.Text);
 
-            myNewTileList[nWidth, nHeight].Tilebox.Image = null;
+            myNewTileList[nWidth, nHeight].Tilebox.Image = null; // 해당 박스의 이미지 제거
+            myNewTileList[nWidth, nHeight].strTileNumber = null; // 해당 박스에 있던 Tile의 strTileNumber 제거
         }
 
         private void lbWorld_Click(object sender, EventArgs e)
