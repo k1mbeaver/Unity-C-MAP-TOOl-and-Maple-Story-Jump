@@ -32,6 +32,7 @@ namespace winformtest
             //public Rectangle rec;
             public int nX;
             public int nY;
+            public Rectangle rec;
             public String strTileNumber;
         }
 
@@ -83,25 +84,140 @@ namespace winformtest
             }
             */
 
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 pntMouseClick.X = e.X;
                 pntMouseClick.Y = e.Y;
 
                 //Graphics grp = pictureBox1.CreateGraphics();
                 //grp.DrawImage(PreviewBox.Image, pntMouseClick);
+
+                for (int TileHeight = 0; TileHeight < 30; TileHeight++)
+                {
+                    for (int TileWidth = 0; TileWidth < 20; TileWidth++)
+                    {
+                        if(myNewTileList[TileWidth, TileHeight].rec.Contains(pntMouseClick) == true)
+                        {
+                            if (PreviewBox.Image == null)
+                            {
+                                MessageBox.Show("타일을 선택하여 주세요", "타일 선택 오류", MessageBoxButtons.OK);
+                                return;
+                            }
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(PreviewBox.Image);
+                            myNewTileList[TileWidth, TileHeight].strTileNumber = TileListBox.Text;
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
+                        }
+                    }
+                }
             }
 
-            else if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            
+            if (e.Button == MouseButtons.Right)
             {
                 pntMouseClick.X = e.X;
                 pntMouseClick.Y = e.Y;
 
                 //Graphics grp = pictureBox1.CreateGraphics();
                 //grp.DrawImage(PreviewBox.Image, pntMouseClick);
+                for (int TileHeight = 0; TileHeight < 30; TileHeight++)
+                {
+                    for (int TileWidth = 0; TileWidth < 20; TileWidth++)
+                    {
+                        if (myNewTileList[TileWidth, TileHeight].rec.Contains(pntMouseClick) == true)
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = null;
+                            myNewTileList[TileWidth, TileHeight].strTileNumber = "";
+                            pictureBox1.Controls.Remove(myNewTileList[TileWidth, TileHeight].Tilebox);
+                        }
+                    }
+                }
+            }
+            
+        }
+        /*
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            /*
+            if(e.Button == System.Windows.Forms.MouseButtons.Middle)
+            {
+                blsClick = true;
+                pntMouseClick.X = e.X;
+                pntMouseClick.Y = e.Y;
+            }
+           
+          
+
+            if (e.Button == MouseButtons.Left)
+            {
+                pntMouseClick.X = e.X;
+                pntMouseClick.Y = e.Y;
+
+                //Graphics grp = pictureBox1.CreateGraphics();
+                //grp.DrawImage(PreviewBox.Image, pntMouseClick);
+
+                for (int TileHeight = 0; TileHeight < 30; TileHeight++)
+                {
+                    for (int TileWidth = 0; TileWidth < 20; TileWidth++)
+                    {
+                        if (myNewTileList[TileWidth, TileHeight].rec.Contains(pntMouseClick) == true)
+                        {
+                            if (PreviewBox.Image == null)
+                            {
+                                MessageBox.Show("타일을 선택하여 주세요", "타일 선택 오류", MessageBoxButtons.OK);
+                                return;
+                            }
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(PreviewBox.Image);
+                            myNewTileList[TileWidth, TileHeight].strTileNumber = TileListBox.Text;
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
+                        }
+                    }
+                }
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                pntMouseClick.X = e.X;
+                pntMouseClick.Y = e.Y;
+
+                //Graphics grp = pictureBox1.CreateGraphics();
+                //grp.DrawImage(PreviewBox.Image, pntMouseClick);
+                for (int TileHeight = 0; TileHeight < 30; TileHeight++)
+                {
+                    for (int TileWidth = 0; TileWidth < 20; TileWidth++)
+                    {
+                        if (myNewTileList[TileWidth, TileHeight].rec.Contains(pntMouseClick) == true)
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = null;
+                            myNewTileList[TileWidth, TileHeight].strTileNumber = "";
+                        }
+                    }
+                }
             }
         }
+        */
+        private void myTileBoxList_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                pntMouseClick.X = e.X;
+                pntMouseClick.Y = e.Y;
 
+                //Graphics grp = pictureBox1.CreateGraphics();
+                //grp.DrawImage(PreviewBox.Image, pntMouseClick);
+                for (int TileHeight = 0; TileHeight < 30; TileHeight++)
+                {
+                    for (int TileWidth = 0; TileWidth < 20; TileWidth++)
+                    {
+                        if (myNewTileList[TileWidth, TileHeight].rec.Contains(pntMouseClick) == true)
+                        {
+                            myNewTileList[TileWidth, TileHeight].Tilebox.Image = null;
+                            myNewTileList[TileWidth, TileHeight].strTileNumber = "";
+                            pictureBox1.Controls.Remove(myNewTileList[TileWidth, TileHeight].Tilebox);
+                        }
+                    }
+                }
+            }
+        }
         private void PictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
 
@@ -152,6 +268,7 @@ namespace winformtest
                         myNewTileList[TileWidth, TileHeight].Tilebox = new PictureBox();
                         myNewTileList[TileWidth, TileHeight].Tilebox.Left = (TileWidth * 26);
                         myNewTileList[TileWidth, TileHeight].Tilebox.Top = (TileHeight * 26);
+                        myNewTileList[TileWidth, TileHeight].Tilebox.Enabled = false;
                         myNewTileList[TileWidth, TileHeight].Tilebox.BackColor = Color.Transparent;
                         myNewTileList[TileWidth, TileHeight].Tilebox.Width = 25;
                         myNewTileList[TileWidth, TileHeight].Tilebox.Height = 25;
@@ -162,91 +279,109 @@ namespace winformtest
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_1);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "UluCity_Tile1-1";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if(Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-2")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_2);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "UluCity_Tile1-2";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-3")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_3);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "UluCity_Tile1-3";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-4")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_4);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "UluCity_Tile1-4";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-5")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_5);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "UluCity_Tile1-5";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "UluCity_Tile1-6")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Tile1_6);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "UluCity_Tile1-6";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-1")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_1);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Halloween_Tile1-1";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-2")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_2);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Halloween_Tile1-2";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-3")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_3);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Halloween_Tile1-3";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-4")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_4);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Halloween_Tile1-4";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-5")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_5);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Halloween_Tile1-5";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Halloween_Tile1-6")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Tile1_6);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Halloween_Tile1-6";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-1")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_1);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Blossom_Tile1-1";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-2")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_2);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Blossom_Tile1-2";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-3")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_3);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Blossom_Tile1-3";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-4")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_4);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Blossom_Tile1-4";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-5")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_5);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Blossom_Tile1-5";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else if (Tile_array[i]["TileNum"].ToString() == "Blossom_Tile1-6")
                         {
                             myNewTileList[TileWidth, TileHeight].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_6);
                             myNewTileList[TileWidth, TileHeight].strTileNumber = "Blossom_Tile1-6";
+                            pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         }
                         else
                         {
@@ -260,7 +395,6 @@ namespace winformtest
                         //g.DrawRectangle(p, myNewTileList[TileWidth, TileHeight].rec);
                         //Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                         i++; // json내부 "Tile"에 있는 []
-                        pictureBox1.Controls.Add(myNewTileList[TileWidth, TileHeight].Tilebox);
                     }
                 }
             }
@@ -330,11 +464,13 @@ namespace winformtest
                     myNewTileList[TileWidth, TileHeight].Tilebox.Left = (TileWidth * 26);
                     myNewTileList[TileWidth, TileHeight].Tilebox.Top = (TileHeight * 26);
                     myNewTileList[TileWidth, TileHeight].Tilebox.Image = null;
+                    myNewTileList[TileWidth, TileHeight].Tilebox.Enabled = false;
                     myNewTileList[TileWidth, TileHeight].Tilebox.BackColor = Color.Transparent;
                     myNewTileList[TileWidth, TileHeight].Tilebox.Width = 25;
                     myNewTileList[TileWidth, TileHeight].Tilebox.Height = 25;
                     myNewTileList[TileWidth, TileHeight].Tilebox.SizeMode = PictureBoxSizeMode.StretchImage;
-                    //myNewTileList[TileWidth, TileHeight].rec = new Rectangle(TileWidth * 25, TileHeight * 25, 25, 25);
+                   // myNewTileList[TileWidth, TileHeight].Tilebox.MouseDown += new System.Windows.Forms.MouseEventHandler(myTileBoxList_MouseDown);
+                    myNewTileList[TileWidth, TileHeight].rec = new Rectangle(TileWidth * 26, TileHeight * 26, 26, 26);
                     myNewTileList[TileWidth, TileHeight].nX = TileWidth;
                     myNewTileList[TileWidth, TileHeight].nY = TileHeight;
                     myNewTileList[TileWidth, TileHeight].strTileNumber = "";
@@ -450,88 +586,14 @@ namespace winformtest
 
         }
 
-        private void btPlace_Click(object sender, EventArgs e)
-        {
-            if(bFileAccess == false)
-            {
-                MessageBox.Show("파일을 새로 만들거나 불러오기를 사용하여 적용시켜 주세요", "파일 오류", MessageBoxButtons.OK);
-                return;
-            }
-            else if (tbWidth.Text == "" || tbHeight.Text == "")
-            {
-                MessageBox.Show("값을 입력하여 주세요", "입력 오류", MessageBoxButtons.OK);
-                return;
-            }
-
-            else if (Convert.ToInt32(tbWidth.Text) > 19 || Convert.ToInt32(tbWidth.Text) < 0)
-            {
-                MessageBox.Show("0 ~ 19사이의 숫자를 입력하여 주세요", "가로 칸", MessageBoxButtons.OK);
-                tbWidth.Text = "";
-                return;
-            }
-
-            else if (Convert.ToInt32(tbHeight.Text) > 29 || Convert.ToInt32(tbHeight.Text) < 0)
-            {
-                MessageBox.Show("0 ~ 29사이의 숫자를 입력하여 주세요", "세로 칸", MessageBoxButtons.OK);
-                tbHeight.Text = "";
-                return;
-            }
-
-            int nWidth, nHeight;
-
-            nWidth = Convert.ToInt32(tbWidth.Text);
-            nHeight = Convert.ToInt32(tbHeight.Text);
-
-            if (PreviewBox.Image == null)
-            {
-                MessageBox.Show("타일을 선택하여 주세요", "타일 선택 오류", MessageBoxButtons.OK);
-                return;
-            }
-            myNewTileList[nWidth, nHeight].Tilebox.Image = new Bitmap(PreviewBox.Image);
-            myNewTileList[nWidth, nHeight].strTileNumber = TileListBox.Text;
-            pictureBox1.Controls.Add(myNewTileList[nWidth, nHeight].Tilebox);
-        }
-
-        private void btTileDelete_Click(object sender, EventArgs e)
-        {
-            if (bFileAccess == false)
-            {
-                MessageBox.Show("파일을 새로 만들거나 불러오기를 사용하여 적용시켜 주세요", "파일 오류", MessageBoxButtons.OK);
-                return;
-            }
-
-            else if (tbWidth.Text == "" || tbHeight.Text == "")
-            {
-                MessageBox.Show("값을 입력하여 주세요", "입력 오류", MessageBoxButtons.OK);
-                return;
-            }
-
-            else if (Convert.ToInt32(tbWidth.Text) > 19 || Convert.ToInt32(tbWidth.Text) < 0)
-            {
-                MessageBox.Show("0 ~ 19사이의 숫자를 입력하여 주세요", "가로 칸", MessageBoxButtons.OK);
-                tbWidth.Text = "";
-                return;
-            }
-
-            else if (Convert.ToInt32(tbHeight.Text) > 29 || Convert.ToInt32(tbHeight.Text) < 0)
-            {
-                MessageBox.Show("0 ~ 29사이의 숫자를 입력하여 주세요", "세로 칸", MessageBoxButtons.OK);
-                tbHeight.Text = "";
-                return;
-            }
-
-            int nWidth, nHeight;
-
-            nWidth = Convert.ToInt32(tbWidth.Text);
-            nHeight = Convert.ToInt32(tbHeight.Text);
-
-            myNewTileList[nWidth, nHeight].Tilebox.Image = null; // 해당 박스의 이미지 제거
-            myNewTileList[nWidth, nHeight].strTileNumber = null; // 해당 박스에 있던 Tile의 strTileNumber 제거
-        }
-
         private void lbWorld_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

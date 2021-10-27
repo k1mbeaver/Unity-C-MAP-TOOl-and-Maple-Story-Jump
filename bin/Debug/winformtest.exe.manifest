@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="winformtest.exe" size="3370976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="winformtest.exe" size="3354592">
       <assemblyIdentity name="winformtest" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WpFWkZZK/ZoR+tZYq+NsBwX1btTHVvl73S7HgxqE6Rw=</dsig:DigestValue>
+        <dsig:DigestValue>iQ5yMNTW9dNuqCzNIMI5MDogGc8F182AD3m9mrLiFro=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
