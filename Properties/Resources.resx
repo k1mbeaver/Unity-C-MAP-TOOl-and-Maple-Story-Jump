@@ -127,6 +127,36 @@
   <data name="Blossom_520x780" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blossom_520x780.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Blossom_Incline_Tile1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom_Incline_Tile1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blossom_Incline_Tile1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom_Incline_Tile1-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blossom_Incline_Tile1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom_Incline_Tile1-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blossom_Incline_Tile1_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom_Incline_Tile1-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blossom_Incline_Tile1_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom_Incline_Tile1-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blossom_Incline_Tile2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom_Incline_Tile2-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blossom_Incline_Tile2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom_Incline_Tile2-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blossom_Incline_Tile2_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom_Incline_Tile2-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blossom_Incline_Tile2_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom_Incline_Tile2-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blossom_Incline_Tile2_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blossom_Incline_Tile2-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Blossom_TIle1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blossom_TIle1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,6 +181,36 @@
   <data name="Halloween_520x780" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Halloween_520x780.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Halloween_Incline_Tile1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_Incline_Tile1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Halloween_Incline_Tile1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_Incline_Tile1-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Halloween_Incline_Tile1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_Incline_Tile1-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Halloween_Incline_Tile1_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_Incline_Tile1-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Halloween_Incline_Tile1_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_Incline_Tile1-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Halloween_Incline_Tile2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_Incline_Tile2-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Halloween_Incline_Tile2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_Incline_Tile2-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Halloween_Incline_Tile2_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_Incline_Tile2-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Halloween_Incline_Tile2_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_Incline_Tile2-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Halloween_Incline_Tile2_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Halloween_Incline_Tile2-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Halloween_Tile1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Halloween Tile1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,6 +234,36 @@
   </data>
   <data name="UluCity_520x780" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UluCity_520x780.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UluCity_Incline_Tile1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UluCity_Incline_Tile1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UluCity_Incline_Tile1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UluCity_Incline_Tile1-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UluCity_Incline_Tile1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UluCity_Incline_Tile1-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UluCity_Incline_Tile1_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UluCity_Incline_Tile1-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UluCity_Incline_Tile1_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UluCity_Incline_Tile1-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UluCity_Incline_Tile2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UluCity_Incline_Tile2-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UluCity_Incline_Tile2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UluCity_Incline_Tile2-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UluCity_Incline_Tile2_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UluCity_Incline_Tile2-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UluCity_Incline_Tile2_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UluCity_Incline_Tile2-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UluCity_Incline_Tile2_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UluCity_Incline_Tile2-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UluCity_Tile1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UluCity_Tile1-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

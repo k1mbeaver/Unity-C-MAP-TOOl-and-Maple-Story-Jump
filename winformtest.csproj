@@ -25,7 +25,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>맵툴 프로그램</ProductName>
     <PublisherName>KSW</PublisherName>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -306,6 +306,96 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UluCity_520x780.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UluCity_Incline_Tile1-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UluCity_Incline_Tile1-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UluCity_Incline_Tile1-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UluCity_Incline_Tile1-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UluCity_Incline_Tile1-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UluCity_Incline_Tile2-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UluCity_Incline_Tile2-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UluCity_Incline_Tile2-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UluCity_Incline_Tile2-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UluCity_Incline_Tile2-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Incline_Tile1-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Incline_Tile1-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Incline_Tile1-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Incline_Tile1-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Incline_Tile1-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Incline_Tile2-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Incline_Tile2-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Incline_Tile2-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Incline_Tile2-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blossom_Incline_Tile2-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Incline_Tile1-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Incline_Tile1-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Incline_Tile1-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Incline_Tile1-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Incline_Tile1-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Incline_Tile2-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Incline_Tile2-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Incline_Tile2-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Incline_Tile2-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween_Incline_Tile2-5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

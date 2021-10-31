@@ -20,7 +20,14 @@ namespace winformtest
         private Point pntMouseClick;
         String[] myTiles = { "UluCity_Tile1-1", "UluCity_Tile1-2", "UluCity_Tile1-3", "UluCity_Tile1-4", "UluCity_Tile1-5", "UluCity_Tile1-6", 
             "Blossom_Tile1-1", "Blossom_Tile1-2", "Blossom_Tile1-3", "Blossom_Tile1-4", "Blossom_Tile1-5", "Blossom_Tile1-6", 
-            "Halloween_Tile1-1", "Halloween_Tile1-2", "Halloween_Tile1-3", "Halloween_Tile1-4", "Halloween_Tile1-5", "Halloween_Tile1-6" };
+            "Halloween_Tile1-1", "Halloween_Tile1-2", "Halloween_Tile1-3", "Halloween_Tile1-4", "Halloween_Tile1-5", "Halloween_Tile1-6",
+            };
+        String[] myInclineTiles = {"UluCity_Incline_Tile1-1", "UluCity_Incline_Tile1-2", "UluCity_Incline_Tile1-3", "UluCity_Incline_Tile1-4", "UluCity_Incline_Tile1-5",
+            "UluCity_Incline_Tile2-1", "UluCity_Incline_Tile2-2", "UluCity_Incline_Tile2-3", "UluCity_Incline_Tile2-4", "UluCity_Incline_Tile2-5",
+            "Blossom_Incline_Tile1-1", "Blossom_Incline_Tile1-2", "Blossom_Incline_Tile1-3", "Blossom_Incline_Tile1-4", "Blossom_Incline_Tile1-5",
+            "Blossom_Incline_Tile2-1", "Blossom_Incline_Tile2-2", "Blossom_Incline_Tile2-3", "Blossom_Incline_Tile2-4", "Blossom_Incline_Tile2-5",
+            "Halloween_Incline_Tile1-1", "Halloween_Incline_Tile1-2", "Halloween_Incline_Tile1-3", "Halloween_Incline_Tile1-4", "Halloween_Incline_Tile1-5",
+            "Halloween_Incline_Tile2-1", "Halloween_Incline_Tile2-2", "Halloween_Incline_Tile2-3", "Halloween_Incline_Tile2-4", "Halloween_Incline_Tile2-5"};
         private bool blsClick = false;
 
         int nPictureBoxX;
@@ -395,6 +402,186 @@ namespace winformtest
                         myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Tile1-6";
                         pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
                     }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "UluCity_Incline_Tile1-1"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile1_1);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "UluCity_Incline_Tile1-1";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "UluCity_Incline_Tile1-2"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile1_2);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "UluCity_Incline_Tile1-2";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "UluCity_Incline_Tile1-3"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile1_3);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "UluCity_Incline_Tile1-3";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "UluCity_Incline_Tile1-4"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile1_4);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "UluCity_Incline_Tile1-4";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "UluCity_Incline_Tile1-5"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile1_5);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "UluCity_Incline_Tile1-5";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "UluCity_Incline_Tile2-1"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile2_1);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "UluCity_Incline_Tile2-1";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "UluCity_Incline_Tile2-2"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile2_2);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "UluCity_Incline_Tile2-2";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "UluCity_Incline_Tile2-3"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile2_3);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "UluCity_Incline_Tile2-3";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "UluCity_Incline_Tile2-4"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile2_4);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "UluCity_Incline_Tile2-4";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "UluCity_Incline_Tile2-5"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile2_5);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "UluCity_Incline_Tile2-5";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Blossom_Incline_Tile1-1"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile1_1);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Incline_Tile1-1";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Blossom_Incline_Tile1-2"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile1_2);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Incline_Tile1-2";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Blossom_Incline_Tile1-3"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile1_3);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Incline_Tile1-3";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Blossom_Incline_Tile1-4"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile1_4);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Incline_Tile1-4";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Blossom_Incline_Tile1-5"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile1_5);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Incline_Tile1-5";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Blossom_Incline_Tile2-1"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile2_1);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Incline_Tile2-1";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Blossom_Incline_Tile2-2"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile2_2);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Incline_Tile2-2";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Blossom_Incline_Tile2-3"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile2_3);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Incline_Tile2-3";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Blossom_Incline_Tile2-4"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile2_4);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Incline_Tile2-4";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Blossom_Incline_Tile2-5"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile2_5);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Blossom_Incline_Tile2-5";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Halloween_Incline_Tile1-1"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile1_1);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Halloween_Incline_Tile1-1";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Halloween_Incline_Tile1-2"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile1_2);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Halloween_Incline_Tile1-2";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Halloween_Incline_Tile1-3"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile1_3);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Halloween_Incline_Tile1-3";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Halloween_Incline_Tile1-4"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile1_4);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Halloween_Incline_Tile1-4";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Halloween_Incline_Tile1-5"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile1_5);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Halloween_Incline_Tile1-5";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Halloween_Incline_Tile2-1"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile2_1);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Halloween_Incline_Tile2-1";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Halloween_Incline_Tile2-2"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile2_2);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Halloween_Incline_Tile2-2";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Halloween_Incline_Tile2-3"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile2_3);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Halloween_Incline_Tile2-3";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Halloween_Incline_Tile2-4"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile2_4);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Halloween_Incline_Tile2-4";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
+                    else if (Tile_array[i]["X"].ToString() != "" && Tile_array[i]["Y"].ToString() != "" && (Tile_array[i]["TileNum"].ToString() == "Halloween_Incline_Tile2-5"))
+                    {
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile2_5);
+                        myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].strTileNumber = "Halloween_Incline_Tile2-5";
+                        pictureBox1.Controls.Add(myNewTileList[Convert.ToInt32(Tile_array[i]["X"]), Convert.ToInt32(Tile_array[i]["Y"])].Tilebox);
+                    }
                 }
             }
         }
@@ -519,6 +706,15 @@ namespace winformtest
                     TileListBox.Items.Add(myTiles[index]);
                 }
             }
+
+            else if (cbTile.Text == "Incline")
+            {
+                TileListBox.Items.Clear();
+                for (int index = 0; index < myInclineTiles.Length; index++)
+                {
+                    TileListBox.Items.Add(myInclineTiles[index]);
+                }
+            }
         }
 
         private void TileListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -580,6 +776,102 @@ namespace winformtest
                         return;
                     case "Blossom_Tile1-6":
                         PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_TIle1_6);
+                        return;
+                }
+            }
+            else if (cbTile.Text == "Incline")
+            {
+                switch (TileListBox.Text)
+                {
+                    case "UluCity_Incline_Tile1-1":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile1_1);
+                        return;
+                    case "UluCity_Incline_Tile1-2":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile1_2);
+                        return;
+                    case "UluCity_Incline_Tile1-3":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile1_3);
+                        return;
+                    case "UluCity_Incline_Tile1-4":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile1_4);
+                        return;
+                    case "UluCity_Incline_Tile1-5":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile1_5);
+                        return;
+                    case "UluCity_Incline_Tile2-1":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile2_1);
+                        return;
+                    case "UluCity_Incline_Tile2-2":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile2_2);
+                        return;
+                    case "UluCity_Incline_Tile2-3":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile2_3);
+                        return;
+                    case "UluCity_Incline_Tile2-4":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile2_4);
+                        return;
+                    case "UluCity_Incline_Tile2-5":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.UluCity_Incline_Tile2_5);
+                        return;
+                    case "Blossom_Incline_Tile1-1":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile1_1);
+                        return;
+                    case "Blossom_Incline_Tile1-2":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile1_2);
+                        return;
+                    case "Blossom_Incline_Tile1-3":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile1_3);
+                        return;
+                    case "Blossom_Incline_Tile1-4":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile1_4);
+                        return;
+                    case "Blossom_Incline_Tile1-5":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile1_5);
+                        return;
+                    case "Blossom_Incline_Tile2-1":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile2_1);
+                        return;
+                    case "Blossom_Incline_Tile2-2":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile2_2);
+                        return;
+                    case "Blossom_Incline_Tile2-3":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile2_3);
+                        return;
+                    case "Blossom_Incline_Tile2-4":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile2_4);
+                        return;
+                    case "Blossom_Incline_Tile2-5":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Blossom_Incline_Tile2_5);
+                        return;
+                    case "Halloween_Incline_Tile1-1":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile1_1);
+                        return;
+                    case "Halloween_Incline_Tile1-2":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile1_2);
+                        return;
+                    case "Halloween_Incline_Tile1-3":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile1_3);
+                        return;
+                    case "Halloween_Incline_Tile1-4":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile1_4);
+                        return;
+                    case "Halloween_Incline_Tile1-5":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile1_5);
+                        return;
+                    case "Halloween_Incline_Tile2-1":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile2_1);
+                        return;
+                    case "Halloween_Incline_Tile2-2":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile2_2);
+                        return;
+                    case "Halloween_Incline_Tile2-3":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile2_3);
+                        return;
+                    case "Halloween_Incline_Tile2-4":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile2_4);
+                        return;
+                    case "Halloween_Incline_Tile2-5":
+                        PreviewBox.Image = new Bitmap(winformtest.Properties.Resources.Halloween_Incline_Tile2_5);
                         return;
                 }
             }
